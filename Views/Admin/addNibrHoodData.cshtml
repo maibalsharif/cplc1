@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "addNibrHoodData";
+}
+
+
+<h2 style="font-family:'Times New Roman';font-size:24px;color:blue">Add Data about NiegberHood Safety Details:</h2>
+
+<form action="/Admin/SaveNibrHoodData/@Model.Id" method="post">
+    <label style="font-family:'Times New Roman';font-size:20px">Enter Data: </label><br /> <textarea  name="data1" style="background-color:white" rows="8" cols="30" required="" class="form-control">@Model.Info</textarea>
+    <input type="submit" value="Submit" style="margin-top:20px;width:100px;height:40px;margin-left:500px;color:blue;font-synthesis:weight;border:double;border-color:red;box-shadow:inset;text-shadow:40px 40px;border-collapse:collapse;font-size:20px"/>
+</form>

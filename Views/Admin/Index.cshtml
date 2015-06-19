@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Login</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            /*//   background:url(bg.jpg);
+            background-image:url(bg.jpg);*/
+            background-image: url(Images/b_img_4.jpg);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+
+    <style>
+        #pic {
+            /*//   background:url(bg.jpg);
+            background-image:url(bg.jpg);*/
+            background-image: url(~/Images/b_img_4.jpg);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container" @*id="pic"*@ style="background-image:url(#)">
+        <div class="row">
+            <div class="col-sm-3">
+                
+            </div>
+             <div style="padding-bottom:100px;width:100px">
+                
+            </div>
+          
+            <div class="col-sm-5" style="margin-left:300px">
+                
+                <form action="~/Admin/check" method="post">
+                    <div class="form-group">
+                        <label for="email" style="color:black"><b>Email</b></label>
+                        <input type="text" class="form-control" name="email" placeholder="Enter the Email" required="required" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" style="color:black"><b>Password</b></label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter the Password" required="required" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="color:black"><b>Login</b></button>
+
+                </form>
+                
+
+            </div>
+            </div>
+        </div>
+    
+</body>
+</html>
+
+

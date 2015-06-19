@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "addHomeData";
+}
+
+<h2 style="font-family:'Times New Roman';font-size:24px;color:blue"><b>Add Home page Data in given particular paragraphs:</b></h2>
+
+<form action="/Admin/SaveHomeData/@Model.Id" method="post" enctype="multipart/form-data">
+    <label style="font-family:'Times New Roman';font-size:20px">Enter Welcome Data: </label><textarea  name="data1" style="background-color:white" rows="5" cols="30" required="" class="form-control">@Model.welcomeInfo</textarea><br />
+      <label style="font-family:'Times New Roman';font-size:20px"> Enter Chief Data: </label><textarea  name="data2" style="background-color:white" rows="5" cols="30" required="" class="form-control">@Model.cplcChiefInfo</textarea><br />
+           <label style="font-family:'Times New Roman';font-size:20px">Select Image of CPLC Chief: </label> <input type="file" name="file" id="file" required="required" style="width:100%;height:100%" />
+    <input type="submit" value="Submit" style="width:100px;height:40px;margin-left:500px;color:blue;font-synthesis:weight;border:double;border-color:red;box-shadow:inset;text-shadow:40px 40px;border-collapse:collapse;font-size:20px"/>
+</form>
+

@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Searched";
+   
+}
+
+<div style="background-color:burlywood">
+<h2>Criminals</h2>
+<div style="background-color:lightgray">
+     
+      @foreach(var x in Model){
+    
+          <img src="~/Images/@x.ImgUrl" style="margin-left:70px;margin-top:30px;width:200px;height:230px"/>
+       
+           
+    <p style="margin-left:0px">
+     <pre>
+         <b>Criminal Id: </b>                       @x.CriminalId
+         <b>Name:     </b>                          @x.Name
+         <b>Father's Name: </b>                     @x.FName
+         <b>Committed Crime:</b>                    @x.CommittedCrime
+         <b>Wanted In:</b>                          @x.WantedIn
+         <br />
+       <b>@x.Details</b>
+    </pre>
+   </p>
+      }
+</div>
+    </div>

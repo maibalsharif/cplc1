@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-color:burlywood">
+<div>
+<p style="color:blue;font-family:'Times New Roman';font-size:30px;margin-left:100px;margin-top:30px" class="description"> <b>Contact <em> Details</em></b> </p>
+    
+</div>
+
+<div >
+    <p style="font-family:'Times New Roman';font-size:15px;margin-top:10px;margin-left:150px;margin-right:30px;text-align:justify">* Thank you for your interest in CPLC. You can contact us using the details below.
+    <br /> <b></b>
+  * Alternatively, you can complete the short Enquiry Form.
+        </p>
+</div>
+
+<div style="width:1000px;height:25px;background-color:red;margin-left:100px;margin-right:100px" >
+    <h3 style="text-align:center;font-size:25px;font-family:'Times New Roman';color:blue"><b>CRC (CENTRAL REPORTING CELL)</b></h3>
+</div>
+<div style="margin-left:200px;margin-right:150px">
+  <h4 style="margin-top:20px;margin-left:0px;margin-right:200px;margin-top:20px">  
+Address	SINDH GOVERNOR'S SECRETARIAT KARACHI:
+      </h4>
+ 	<p  style="color:black;font-family:'Times New Roman';font-size:20px;margin-left:200px;margin-right:200px"> 
+         <pre>
+          <b>U.A.N Number</b>       @Model.UanNo
+          <b>Emergency No.</b>      @Model.EmergencyNo
+ 	  <b>Phone Number </b>      @Model.PhoneNo
+ 	                     	 
+          <b>Fax Number</b>         @Model.FaxNo         </pre>
+             </p>
+</div>
+
+<div style="width:1000px;height:25px;background-color:red;margin-left:100px;margin-right:100px;margin-top:20px" >
+    <h3 style="text-align:center;font-size:25px;font-family:'Times New Roman';color:blue"><b>CPLC ZONAL OFFICES</b></h3>
+</div>
+<div style="margin-left:200px;margin-right:150px">
+  <p style="color:black;font-family:'Times New Roman';font-size:20px;margin-left:200px;margin-right:200px;margin-bottom:20px">
+      <pre>  	 
+<b>CPLC SOUTH (S.S.P OFFICE SOUTH)</b>                                        <b>  CPLC WEST (S.S.P OFFICE WEST)</b>	 
+Phone Number: @Model.CplcSouth                                    Phone Number:	@Model.CplcWest
+ 	                                                              
+ 	 
+<b>CPLC EAST (S.S.P OFFICE EAST)</b>                                          <b>CPLC CENTRAL (S.S.P OFFICE CENTRAL)</b>	 
+Phone Number: @Model.CplcEast                                        Phone Number: @Model.CplcCenteralv
+ 	                                                         
+ 	 
+
+                                        <b>CPLC MALIR (S.S.P OFFICE MALIR)</b>
+                                        Phone Number: @Model.CplcMalir	
+ 	                                                
+   
+</pre>
+</p>
+    </div>
+
+    </div>

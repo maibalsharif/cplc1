@@ -1,0 +1,168 @@
+﻿@{
+    ViewBag.Title = "NewUpdate";
+}
+
+<h2 style="text-align:center;font-family:'Times New Roman';font-size:24px;color:green"><b><u>Your FIR</u></b></h2>
+<div>
+<p style="font-family:'Times New Roman';font-size:17px;color:blue;margin-left:140px">Fill the form very carefully.</p>
+<p style="font-family:'Times New Roman';font-size:17px;color:red;margin-left:140px">The fields marked (*) are mandatory to be filled.</p>
+    <p style="font-family:'Times New Roman';font-size:17px;color:blue;margin-left:140px">An ID is displayed on Your FIR;Please, Remember it for further Procedure and to View the Progress about your FIR.</p>
+<form action="/Admin/SaveNewUpdate/@Model.Id" method="post">
+<table border="1"  border-collapse: collapse border-spacing="15px" style="width:70%;text-align:left;margin-left:140px">
+        <caption style="border:solid;border-width:2px;border-color:darkgrey;text-align:center;font-family:'Times New Roman';font-size:30px;color:#f30505"><b>Remember This ID:  @ViewBag.no</b></caption>
+    <caption style="border:solid;border-width:2px;border-color:darkgrey;text-align:center;font-family:'Times New Roman';font-size:20px;color:blue"><b>Complainant’s Detail</b></caption>
+    
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>ID</b></td>
+        <td style="padding-left:10px"><input name="id2" type="text"style="width:500px"  value="@Model.Id"/></td>
+      
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Name</b></td>
+        <td style="padding-left:10px"><input name="name" type="text"style="width:500px"  value="@Model.Name"/></td>
+      
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Father's Name</b></td>
+        <td style="padding-left:10px"><input name="fName" type="text" style="width:500px" value="@Model.FName"/></td>
+    </tr>
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>CNIC#</b></td>
+        <td style="padding-left:10px"><input name="cnic" type="text" style="width:300px"  value="@Model.Cnic"/></td>
+      
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Land Line#</b></td>
+        <td style="padding-left:10px"><input name="landNo" type="text" style="width:250px"  value="@Model.LineNo"/> </td>
+    </tr>
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Mobile#</b></td>
+        <td style="padding-left:10px"><input name="mobileNo" type="text" style="width:250px"  value="@Model.MobileNo"/></td>
+      
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Email Address</b></td>
+        <td style="padding-left:10px"><input name="email" type="text" style="width:250px"  value="@Model.Email"/></td>
+    </tr>
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>Present Address</b></td>
+       <td style="padding-left:10px"><input name="address" type="text" style="width:500px" value="@Model.Address"/></td>
+      
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>Home District</b></td>
+        <td>
+            <select  name="district" style="margin-left:10px;width:120px;height:17px " >
+                <option selected >@Model.HDistt</option>
+                <option value="lahore">Lahore</option>
+                <option value="rajanpur">Rajan Pur</option>
+                <option value="mianwali">Mianwali</option>
+                <option value="bhakkar">Bhakkar</option>
+                <option value="khushab">Khushab</option>
+                <option value="qasoor">Qasoor</option>
+                <option value="jhang">Jhang</option>
+                <option value="layyah">Layyah</option>
+            </select>
+        </td>
+    </tr>
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Home Police Station</b></td>
+        <td>
+            <select  name="policeStation"  style="margin-left:10px;width:120px;height:17px" >
+                <option selected >@Model.HPStation</option>
+                <option value="lahore">Manawana</option>
+                <option value="rajanpur">Samandri</option>
+                <option value="mianwali">Rokhri</option>
+                <option value="bhakkar">Kallur Kot</option>
+                <option value="khushab">Khushab</option>
+                <option value="qasoor">Qasoor</option>
+                <option value="jhang">Samundri</option>
+                <option value="layyah">Karoor</option>
+            </select>
+        </td>
+    </tr>
+    <th style="border:solid;border-width:2px;border-color:darkgrey;text-align:center;font-family:'Times New Roman';font-size:20px;color:blue;height:30px" colspan="2"><b>Information Report</b></th>
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Date of Incident</b></td>
+        <td style="padding-left:10px"><input name="incidentDate" type="date" min="2015-01-01"style="width:120px;height:17px" value="@Model.IncidentDate+"""/> </td>
+      
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Time of Incident</b></td>
+        <td style="padding-left:10px"><input name="incidentTime" type="time" style="width:120px;height:17px" value="@Model.IncidentTime"/></td>
+    </tr>
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>Place of Incident</b></td>
+        <td style="padding-left:10px"><input name="IncidentPlace" type="text" style="width:300px" value="@Model.IncidentPlace"/></td>
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>District of Incident</b></td>
+        <td>
+            <select name="district2"  style="margin-left:10px;width:120px;height:17px"  >
+                <option selected >@Model.IncidentDistt</option>
+                <option value="lahore">Lahore</option>
+                <option value="rajanpur">Rajan Pur</option>
+                <option value="mianwali">Mianwali</option>
+                <option value="bhakkar">Bhakkar</option>
+                <option value="khushab">Khushab</option>
+                <option value="qasoor">Qasoor</option>
+                <option value="jhang">Jhang</option>
+                <option value="layyah">Layyah</option>
+            </select> 
+        </td>
+    </tr>
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>Police Station Jurisdiction</b></td>
+        <td>
+             <select name="policeStationJuri"  style="margin-left:10px;width:120px;height:17px" >
+                 <option selected >@Model.PSJuris</option>
+                <option value="lahore">Manawana</option>
+                <option value="rajanpur">Samandri</option>
+                <option value="mianwali">Rokhri</option>
+                <option value="bhakkar">Kallur Kot</option>
+                <option value="khushab">Khushab</option>
+                <option value="qasoor">Qasoor</option>
+                <option value="jhang">Samundri</option>
+                <option value="layyah">Karoor</option>
+            </select>
+        </td>
+    </tr>
+    <tr style="height:80px">
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>Details of Incident</b></td>
+        <td><textarea  name="incidentDetails" style="background-color:white" rows="3" cols="30"  class="form-control" >@Model.IncidentDetails</textarea>
+</td>
+    </tr>
+     <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>Already Visited Police Station</b></td>
+        <td style="padding-left:20px">
+            <input type="radio" name="IsVisited1" value="Yes" style="font-family:'Times New Roman';font-size:30px" checked id="rb1" aria-readonly="true" ><b>Yes</b>
+            <input type="radio" name="IsVisited1"  style="margin-left:30px;font-family:'Times New Roman';font-size:30px" value="No" id="rb2" ><b>No</b>
+        </td>
+    </tr>
+     <tr style="height:70px">
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>Visit Details(Name/Rank of Police Officer visited)</b></td>
+        <td><textarea  name="visitDetails" style="background-color:white" rows="2" cols="30"  class="form-control" >@Model.VisitDetails</textarea>
+
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px"><b>Visit Date</b></td>
+        <td style="padding-left:10px"><input name="visitDate" type="Date" min="2015-05-02" style="width:120px;height:17px" value="@Model.VisitDate"+""/></td>
+
+    </tr>
+    <tr>
+        <td style="width:190px;font-family:'Times New Roman';font-size:15px""><b>Visit Time</b></td>
+        <td style="padding-left:10px"><input name="visitTime" type="time" style="width:120px;height:17px"  value="@Model.VisitTime"/></td>
+
+    </tr> 
+     <tr style="height:70px">
+        <td style="width:190px;font-family:'Times New Roman';font-size:22px;color:blue;text-align:center"><b><u>Comment</u></b></td>
+        <td><textarea  name="com" style="background-color:white; border-color:red" rows="4" cols="30"  class="form-control">@Model.Comment</textarea>
+
+    </tr>
+     
+</table>
+         <input type="submit" value="Submit" style="color:blue;text-align:center;background-color:darkgrey;border-color:black;width:120px;height:40px;margin-left:500px;margin-top:20px;font-family:'Times New Roman';font-size:30px"/>
+
+</form>
+</div>
+

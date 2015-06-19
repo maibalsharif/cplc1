@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "MyView";
+   Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+<div style="background-color:burlywood;margin-top:-60px">
+<div style="margin-left:625px;padding-top:30px">
+       <h2 style="color:black"><u style="outline:double;background-color:black;color:white">TO REGISTER A NEW ADMIN</u></h2>
+
+                <form action="~/Account/Add" method="post">
+                    <div class="form-group">
+                        <label for="name" style="color:black;font-size:20px"><b>Name</b></label>
+                        <input type="text" style="width:500px" class="form-control" name="Name" placeholder="Enter the Name" required="required" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" style="color:black;font-size:20px"><b>Email</b></label> 
+                        <input type="text" class="form-control" name="Email" placeholder="Enter the Email" required="required" style="width:500px"  />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" style="color:black;font-size:20px"><b>Password</b></label>
+                        <input type="password" class="form-control" name="Password" placeholder="Enter the Password" required="required" style="width:500px"  />
+
+                    </div>
+                    @*<div class="form-group">
+                        <label for="password">ReEnter Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter the Password Again" required="required" />
+
+                    </div>*@
+                    @*<div class="form-group">
+                        <label for="phone">Enter the Phone Number</label>
+                        <input type="number" class="form-control" name="Phone" placeholder="Enter the Phone" required="required" />
+
+                    </div>*@
+
+                    
+                    <button type="submit"  style="color:black;background-color:green;color:black;font-family:'Times New Roman';font-size:23px;margin-bottom:30px" ><b>Register</b></button>
+
+                        @*<div class="submit">
+                    <input type="submit" value="Submit" />
+                </div>*@
+                </form>
+
+</div>
+
+<div style="width:650px;margin-top:-360px">
+    <h4><u>To Enter New Data in Index Items:</u></h4>
+<a href="~/Admin/addSclData/1" style="font-size:25px">To Add School Saftey Data.</a><br /><br />
+<a href="~/Admin/addHomeSftyData/1" style="font-size:25px">To Add Home Saftey Data.</a><br /><br />
+<a href="~/Admin/addNibrHoodData/1" style="font-size:25px">To Add NiberHood Saftey Data.</a><br /><br />
+<a href="~/Admin/addFirInfoData/1" style="font-size:25px">To Add Fir Info Data.</a><br /><br />
+<a href="~/Admin/addCriminalData" style="font-size:25px">To Add Criminal Info Data.</a><br /><br />
+
+
+
+<h4><u>To Enter data in NavBar Items:</u></h4>
+<a href="~/Admin/addHomeData/1" style="font-size:25px">To Add Home Data.</a><br /><br />
+<a href="~/Admin/addAboutUsData/1" style="font-size:25px">To Add About Us Data.</a><br /><br />
+<a href="~/Admin/MainLinks" style="font-size:25px">To Add UseFull Links.</a><br /><br />
+  <a href="~/Admin/addContactUsData/1" style="font-size:25px">To Add Contact Us Data.</a>
+<h4><u>To Enter Latest News:</u></h4>
+<a href="~/Admin/addNewsFeedData/1" style="font-size:25px">To Add NewsFeed.</a><br /><br />
+<a href="~/admin/ToSelectFirUpdate" style="font-size:25px">To To View And Comment Firs.</a><br /><br />
+
+<div>
+
+    </div>
+    </div>
+    <form action="~/Admin/Index" method="post">
+ <input type="submit" value= "Logout" style="width:300px;height:100px;margin-left:400px;background-color:red;color:black;font-family:'Times New Roman';font-size:46px;margin-bottom:30px" />
+</form>
+    </div>

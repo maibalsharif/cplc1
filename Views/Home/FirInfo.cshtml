@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "FirInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 style="color:red"><u>Basic FIR Information and Registration:</u></h2>
+
+    <table>
+        @foreach(var s in Model)
+        {
+        <tr>
+          <td><p  style="font-size:15px;font-family:'Times New Roman';text-align:justify">@s.Info</p></td>  
+        </tr>
+        }
+    </table>
+<br />
+
+<div style="font-size:30px;font-family:'Times New Roman';margin-left:400px;margin-bottom:40px;margin-top:20px">
+    <a href="~/Home/EnterFir" style="font-family:'Times New Roman';font-size:30px;font-style:italic;align-content:center;color:red"><b>Click For FIR(پرجہ درج کرنے کیلئے یہاں کلک کریں)</b></a>
+</div>
+
+<br />
+<br />

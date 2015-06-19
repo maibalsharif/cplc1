@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Criminals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div style="background-color:burlywood">
+<h2>Criminals</h2>
+<div style="background-color:lightgray">
+     
+      
+    <img src="~/Images/@Model.ImgUrl" style="margin-left:70px;margin-top:30px;width:200px;height:230px"/>
+       
+           
+    <p style="margin-left:0px">
+     <pre>
+         <b>Criminal Id: </b>                       @Model.CriminalId
+         <b>Name:     </b>                          @Model.Name
+         <b>Father's Name: </b>                     @Model.FName
+         <b>Committed Crime:</b>                    @Model.CommittedCrime
+         <b>Wanted In:</b>                          @Model.WantedIn
+         <br />
+       <b>@Model.Details</b>
+    </pre>
+   </p>
+</div>
+    </div>

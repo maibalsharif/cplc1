@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "ForHomeSafety";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-color:burlywood">
+
+<h2 style="color:red"><u>Safety Measures For Family & Child:</u></h2>
+
+    <table>
+        @foreach(var s in Model)
+        {
+        <tr>
+          <td><p  style="font-size:15px;font-family:'Times New Roman';text-align:justify">@s.Info</p></td>  
+        </tr>
+        }
+    </table>
+
+    </div>

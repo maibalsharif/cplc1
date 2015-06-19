@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UserDataBase" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\UserDataBase.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="UserDataBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ComplaintForm" Member="ComplaintForms">
+    <Type Name="ComplaintForm">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cnic" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="[LineNo]" Member="LineNo" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HDistt" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HPStation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IncidentDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IncidentTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="IncidentPlace" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IncidentDistt" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PSJuris" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IncidentDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ItemsDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ans" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VisitDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VisitDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VisitTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EnterFir" Member="EnterFirs">
+    <Type Name="EnterFir">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Cnic" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[LineNo]" Member="LineNo" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="HDistt" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="HPStation" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentPlace" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentDistt" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PSJuris" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentDetails" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Ans" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="VisitDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VisitDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VisitTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OkFir" Member="OkFirs">
+    <Type Name="OkFir">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Cnic" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[LineNo]" Member="LineNo" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="HDistt" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="HPStation" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentTime" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentPlace" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentDistt" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PSJuris" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IncidentDetails" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Ans" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="VisitDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VisitDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VisitTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

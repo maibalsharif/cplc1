@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="margin-left:15px;margin-right:50px">
+        <h4>Welcome to CPLC</h4>
+    
+    <table>
+        @foreach(var s in Model)
+        {
+        <tr>
+          <td><p style="font-size:15px;font-family:'Times New Roman';text-align:justify" > @s.welcomeInfo</p></td> 
+        </tr>
+        }
+    </table>
+
+       
+    </div>
+
+    <div style="margin-left:15px;margin-right:50px">
+         @foreach(var u in Model){
+        <img src="~/Images/@u.img" width="100" height="120"  />
+         }
+       
+        <h4 style="margin-left:103px;margin-top:-122px">CPLC Chief:</h4>
+        
+         <table>
+        @foreach(var s in Model)
+        {
+        <tr>
+          <td>  <p style="align-content:center;font-size:15px;font-family:'Times New Roman';text-align:justify;margin-left:103px"> @s.cplcChiefInfo</p></td> 
+        </tr>
+        }
+    </table>
+       
+
+      
+    </div>
+<div>
+  
+     <a href="/Home/ChildSafety">
+         
+        <img src="~/Images/scholSafty.jpg" style="width:200px ; height:200px ;margin-left:200px;margin-left:120px;margin-top:-25px;margin-bottom:20px;" />
+         
+        
+    </a>
+
+    <a href="/Home/Theft">
+        <img src="~/Images/mobileTheft.jpg" style="width:200px ; height:200px;margin-right:40px;margin-bottom:40px;margin-top:7px;margin-left:180px"/>
+    </a>
+
+    <br />
+
+        <a href="/Home/Neiberhood">
+         <img src="~/Images/niebrhood.jpg" style="width:200px ; height:200px;margin-right:0px;margin-bottom:40px;margin-top:20px;margin-left:120px"/>
+    </a>
+    
+    <a href="/Home/viewAllCriminals">
+        <img src="~/Images/consumer.jpg" style="width:200px ; height:200px;margin-right:40px;margin-bottom:40px;margin-top:40px;margin-left:185px" />
+
+    </a>
+
+   
+
+         <a href="/Home/FirInfo">
+        <img src="~/Images/fir.jpg" style="width:200px ; height:200px;margin-right:0px;margin-bottom:40px;margin-top:-250px;margin-left:850px"/>
+    </a>
+    
+     <a href="/Home/ForHomeSafety">
+         <img src="~/Images/homesec.jpg" style="width:200px ; height:200px;margin-right:0px;margin-bottom:40px;margin-top:-840px;margin-left:850px"/>
+     </a>
+
+    <a href="/Admin/TakeKey">
+         <img src="~/Images/viewFIR.png" style="width:200px ; height:200px;margin-right:0px;margin-bottom:40px;margin-top:0px;margin-left:510px"/>
+
+     </a>
+</div>
+
+
+
+
+
+
+
+
+ 
+

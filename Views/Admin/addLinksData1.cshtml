@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "addLinksData1";
+}
+
+<h2 style="font-family:'Times New Roman';font-size:24px;color:blue">Add Important Links:</h2>
+<form action="/Admin/SaveLinksData" method="post">
+    <label style="font-family:'Times New Roman';font-size:20px">Enter Name With Designation e.g(Aslam( Assistant Chief)):<br /> </label> <textarea  name="data1" style="background-color:white" rows="3" cols="40" required="" class="form-control"></textarea><br /><br />
+   <label style="font-family:'Times New Roman';font-size:20px">Enter Link:</label><br /><textarea  name="data2" style="background-color:white" rows="3" cols="40" required="" class="form-control"></textarea> <br />
+    <input type="submit" value="Submit" style="width:100px;height:40px;margin-left:500px;color:blue;font-synthesis:weight;border:double;border-color:red;box-shadow:inset;text-shadow:40px 40px;border-collapse:collapse;font-size:20px"/>
+</form>

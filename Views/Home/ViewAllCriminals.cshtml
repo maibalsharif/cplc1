@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "ViewAllCriminals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-top:100px;font-family:'Times New Roman';color:blue;margin-top:70px"><u>All Mosted Wanted Criminals:</u></h2>
+
+
+
+
+    <div  style="background-color:lightgray;margin-top:30px;margin-left:20px;margin-right:150px;margin-bottom:50px;">
+<table>
+    <tr><td style="font-size:20px;color:blue;font-family:'Times New Roman';padding-left:20px;margin-left:60px"><b><u style="list-style:square;color:red">Criminal Id</u></b></td>
+    
+  <td style="font-size:20px;color:blue;font-family:'Times New Roman';padding-left:60px"><b><u style="list-style:square;color:red">Name</u></b></td>
+    
+    <td style="font-size:20px;color:blue;font-family:'Times New Roman';padding-left:200px"><b><u style="list-style:square;color:red">Father Name</u></b></td>
+
+    <td style="font-size:20px;color:blue;font-family:'Times New Roman';padding-left:200px"><b><u style="list-style:square;color:red">Picture</u></b></td></tr>
+
+    @foreach (var s in Model)
+    {
+        
+        <tr style="border-bottom:solid;border-bottom-color:#f00;border-bottom-width:1px;margin-left:100px">
+             <td style="font-size:17px;padding-left:60px;font-family:'Times New Roman'"> @s.CriminalId</td>
+           
+            <td style="font-size:17px;padding-left:65px;font-family:'Times New Roman'"><a href="/Home/Criminals/@s.CriminalId" target="_blank"> @s.Name </a></td>
+            <td style="font-size:17px;padding-left:200px;font-family:'Times New Roman'"> @s.FName </td>
+            <td style="font-size:17px;padding-left:200px;font-family:'Times New Roman';padding-bottom:7px"> <img src="~/Images/@s.ImgUrl" width="80" height="100"  /></td>
+<tr><td></td></tr>
+        </tr>
+        
+
+       
+    
+    }
+   
+</table>
+    </div>
